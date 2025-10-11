@@ -1,0 +1,500 @@
+/* General Body and Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light grey background */
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #002d62; /* Dark blue */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Wider navigation */
+    margin: 0 auto;
+    padding: 0 25px; /* More padding */
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 30px; /* More spacing */
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #a0d2eb; /* Lighter blue on hover */
+}
+
+/* Buttons */
+.btn, .read-more-btn {
+    display: inline-block;
+    background: #007bff; /* Primary blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn-ELP {
+    display: inline-block;
+    background: #28a745; /* Green for Explore Latest Posts */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    /* justify-content: center; */
+}
+
+.btn:hover, .read-more-btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Main Content Sections */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 25px;
+}
+
+.page-content { /* For about and contact pages */
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Hero Section */
+/* .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+} */
+
+/* Hero Section */
+.hero {
+    /* Use a linear gradient for an overlay effect, then the background image */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px; /* Adjust padding as needed for height */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex; /* Re-enabled for centering content vertically */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 400px; /* Give it a minimum height to display the image well */
+    position: relative; /* Needed if you add other positioned elements inside */
+    /* overflow: hidden; */ /* Keep if you have elements that might spill, or remove if not necessary */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Adds readability */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Adds readability */
+}
+
+
+/* Blog Posts Section */
+.blog-posts-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #002d62;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.blog-posts-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 10px auto 0 auto;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-card h3 {
+    font-size: 1.6rem;
+    margin: 15px 15px 5px 15px;
+}
+
+.post-card h3 a {
+    color: #002d62;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card h3 a:hover {
+    color: #007bff;
+}
+
+.post-card p {
+    padding: 0 15px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.post-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+    padding: 0 15px;
+    margin-bottom: 5px;
+}
+
+.read-more-btn {
+    margin: 0 15px 15px 15px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* Individual Post Page Styles (used by posts/*.html) */
+.single-post-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.single-post-content h2 {
+    font-size: 2.8rem;
+    color: #002d62;
+    margin-bottom: 10px;
+}
+
+.single-post-content .post-date {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    display: block; /* To make it take full width */
+}
+
+.single-post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.single-post-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.single-post-content ul, .single-post-content ol {
+    margin-left: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.single-post-content li {
+    margin-bottom: 0.8rem;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.8rem;
+    color: #002d62;
+    margin-bottom: 20px;
+}
+
+.about-section .about-image {
+    max-width: 250px;
+    height: auto;
+    margin: 20px auto 30px auto;
+    display: block;
+    /* border-radius: %; If you want a circular logo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section h3 {
+    font-size: 2rem;
+    color: #002d62;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style: disc;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+.about-section li {
+    margin-bottom: 10px;
+}
+
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.8rem;
+    color: #002d62;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+    color: #002d62;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #002d62; /* Dark blue */
+    color: #fff;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: #a0d2eb;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+        display: block; /* Stack links vertically on mobile */
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .blog-posts-section h2, .about-section h2, .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .single-post-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+
+    }
+}
