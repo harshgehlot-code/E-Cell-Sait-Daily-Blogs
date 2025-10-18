@@ -21,3 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add other interactive elements here as needed.
 });
+
+//   const form = document.getElementById('contactForm');
+//   const status = document.getElementById('form-status');
+
+//   form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const data = new FormData(form);
+//     status.textContent = "Sending...";
+    
+//     fetch(form.action, {
+//       method: form.method,
+//       body: data,
+//       headers: { 'Accept': 'application/json' }
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         status.textContent = "✅ Message sent successfully!";
+//         form.reset();
+//       } else {
+//         status.textContent = "❌ Failed to send message. Try again later.";
+//       }
+//     })
+//     .catch(() => {
+//       status.textContent = "⚠️ Network error. Please check your connection.";
+//     });
+//   });
