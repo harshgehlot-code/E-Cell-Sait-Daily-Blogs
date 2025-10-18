@@ -131,7 +131,12 @@ main {
 /* Hero Section */
 .hero {
     /* Use a linear gradient for an overlay effect, then the background image */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover; */
+     background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('../images/AURO\ LOGO.png') no-repeat center center, 
+        url('../images/hero-bg.jpg') no-repeat center center/cover;
+
     color: #fff;
     text-align: center;
     padding: 100px 20px; /* Adjust padding as needed for height */
